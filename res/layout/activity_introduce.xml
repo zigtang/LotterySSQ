@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titleView="http://schemas.android.com/apk/res/com.zig.lottery.ssq"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.zig.lottery.ssq.ui.widgets.TitleView
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titleView:text="@string/tv_introduce_title"
+        titleView:text_leftBtn="@string/btn_title_back" />
+    <RelativeLayout 
+        android:id="@+id/layout_adv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_below="@id/layout_title"
+        android:layout_above="@id/layout_adv"
+        android:scrollbars="none"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_introduce_tks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/tv_introduce_tks"
+                android:layout_marginTop="50dp"
+                android:text="@string/tv_introduce_description" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

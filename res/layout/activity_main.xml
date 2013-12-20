@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:titleView="http://schemas.android.com/apk/res/com.zig.lottery.ssq"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zig.lottery.ssq.ui.widgets.TitleView
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titleView:text="@string/tv_main_title"
+        titleView:text_leftBtn="@string/btn_main_titleLeft"
+        titleView:text_rightBtn="@string/btn_main_titleRight" />
+    
+    <RelativeLayout 
+        android:id="@+id/layout_adv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title"
+        android:layout_above="@id/layout_adv"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_main_genNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_btn_common"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:text="@string/btn_main_genNum"
+                android:textColor="@drawable/selector_textcolor_common" />
+
+            <TextView
+                android:id="@+id/tv_main_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/btn_main_genNum"
+                android:textSize="16sp"
+                android:textColor="@android:color/holo_blue_bright"
+                android:padding="10dp"/>
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/sv_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/layout_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" />
+        </ScrollView>
+        <TextView
+            android:id="@+id/tv_main_function"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:text="@string/tv_main_function"
+            android:gravity="center"
+            />
+            
+    </LinearLayout>
+    
+    
+
+</RelativeLayout>
